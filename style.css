@@ -68,13 +68,16 @@ main {
        outline: none;
 }
 
-.conta input::placeholder {
+.conta input::placeholder,
+.pessoas input::placeholder {
         color: var(--green-300);
 }
 
-.conta:has(input:focus) div {
+.conta:has(input:focus) div,
+.pessoas:has(input:focus) div {
     outline: 2px solid var(--light-green);
 }
+
 .gorjeta div {
     margin-top: 1rem;
 
@@ -103,4 +106,8 @@ main {
 
 .gorjeta #outra::placeholder {
     color: var(--green-300);
+}
+
+.pessoas #erro {
+    display: none;
 }
