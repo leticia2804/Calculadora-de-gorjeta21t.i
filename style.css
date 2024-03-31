@@ -16,7 +16,7 @@
     --green-800: #00474b;
     --light-green: #26c2ae;
     --white: #ffffff;
-}
+} 
 
 body {
     background-color: var(--green-200);
@@ -31,25 +31,27 @@ header {
 main {
     background-color: var(--white);
     padding: 2rem;
+    border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
 .conta,
-.gorjeta {
+.gorjeta,
+.pessoas {
     margin-bottom: 2rem;
 }
 
 .conta label,
 .gorjeta label,
-.pessoas label{
+.pessoas label {
     color: var(--green-500);
     font-weight: 700;
 }
 
 .conta div,
-.pessoas div{
+.pessoas div {
       margin-top: 0.4rem;
       background: var(--green-100);
-      padding: 00.4rem 1.2rem;
+      padding: 0.4rem 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -110,4 +112,99 @@ main {
 
 .pessoas #erro {
     display: none;
+}
+
+.resultados {
+    background-color: var(--green-800);
+    border-radius: 0.9375rem;
+    padding: 1.5rem; 
+}
+
+.resultados div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultados p {
+    color: var(--green-400);
+    font-size: 0.8125;
+}
+
+.resultados p strong {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.resultados div > strong {
+    color: var(--light-green);
+    font-size: 2rem;
+}
+
+.resultados .gorjeta-total {
+     margin-bottom: 1.25rem;
+}
+
+.resultados .total {
+    margin-bottom: 2rem;
+}
+
+.resultados button {
+    width: 100%;
+    background: var(--light-green);
+    border: none;
+    border-radius: 0.3125rem;
+    color: var(--green-800);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-block: 0.5rem;
+}
+
+@media(min-width: 900px) {
+    body {
+       display:flex;
+       flex-direction: column;
+       min-height: 100svh;
+       justify-content: center;
+       gap: 5rem;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    main {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+        border: 1.5625rem;
+        max-width: 57.5rem;
+        margin-inline: auto;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .conta input::-webkit-inner-spin-button
+    .pessoas input::-webkit-inner-spin-button {
+        display: none;
+    }
+   
+    .gorjeta div {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .resultados {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 2.5rem;
+    }
+
+    .resultados div > strong {
+        font-size: 3rem;
+    }
 }
